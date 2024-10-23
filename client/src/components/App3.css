@@ -10,7 +10,7 @@
 
 h2 {
     text-align: center;
-    color: #4a4a4a; /* Darker color for the heading */
+    color: #4a4a4a;
     margin-bottom: 20px;
 }
 
@@ -30,7 +30,7 @@ label {
 }
 
 .required-star {
-    color: red; /* Red color for the required star */
+    color: red;
 }
 
 input[type="text"],
@@ -39,11 +39,11 @@ input[type="url"],
 textarea,
 select {
     width: 100%;
-    padding: 12px; /* Increased padding */
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
-    transition: border-color 0.3s; /* Smooth transition */
+    transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
@@ -51,7 +51,7 @@ input[type="number"]:focus,
 input[type="url"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #8a2be2; /* Border color change on focus */
+    border-color: #8a2be2;
 }
 
 textarea {
@@ -62,14 +62,14 @@ textarea {
 .submit-button {
     display: block;
     width: 100%;
-    padding: 12px; /* Increased padding */
+    padding: 12px;
     background-color: #8a2be2;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background-color 0.3s;
 }
 
 .submit-button:hover {
@@ -79,8 +79,8 @@ textarea {
 .image-url-group,
 .feature-group {
     margin-bottom: 10px;
-    padding: 10px; /* Padding for each added field */
-    background-color: #f9f9f9; /* Light background for added fields */
+    padding: 10px;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
