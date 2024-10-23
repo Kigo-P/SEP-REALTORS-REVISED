@@ -663,6 +663,6 @@ api.add_resource(Signup, "/signup", endpoint = "/signup")
 # api.add_resource(Logout, "/logout", endpoint = "/logout")
 
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5555))
     app.run(host="0.0.0.0", port=port, debug=True)
