@@ -26,7 +26,7 @@ const AdminPage = () => {
     
 
     useEffect(() => {
-        fetch(`/users/${id}`)
+        fetch(`https://sep-realtors-revised.onrender.com/users/${id}`)
             .then((response) => response.json())
             .then((data) => setUser(data))
             .catch((error) => console.error('Error fetching bought properties:', error));
@@ -35,7 +35,7 @@ const AdminPage = () => {
 
     useEffect(() => {
         if (activeTab === 'boughtProperties') {
-            fetch('/bought-properties',{
+            fetch('https://sep-realtors-revised.onrender.com/bought-properties',{
                 method: "GET",
                 headers:{
                     'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ const AdminPage = () => {
                 .catch(error => console.error('Error fetching purchase requests:', error));
 
         } else if (activeTab === 'updateProperty' || activeTab === 'deleteProperty') {
-            fetch('/properties', {
+            fetch('https://sep-realtors-revised.onrender.com/properties', {
                 method: "GET",
                 headers:{
                     'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ const AdminPage = () => {
                 })
                 .catch(error => console.error('Error fetching properties:', error));
         } else if (activeTab === 'approvePurchases') {
-            fetch('/purchases',{
+            fetch('https://sep-realtors-revised.onrender.com/purchases',{
                 method: "GET",
                 headers:{
                     'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const AdminPage = () => {
                 .then(data => setPurchaseRequests(data))
                 .catch(error => console.error('Error fetching purchase requests:', error));        
         }else if (activeTab === 'deleteAdmins'){
-            fetch('/admins',{
+            fetch('https://sep-realtors-revised.onrender.com/admins',{
                 method: "GET",
                 headers:{
                     'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const AdminPage = () => {
     }, [activeTab]);
 
     const handleUpdateProperty = (propertyId, updatedData) => {
-        fetch(`/properties/${propertyId}`, {
+        fetch(`https://sep-realtors-revised.onrender.com/properties/${propertyId}`, {
             method: 'PATCH',
             body: JSON.stringify(updatedData),
             headers: {
@@ -112,7 +112,7 @@ const AdminPage = () => {
 
 
     const handleDeleteProperty = (propertyId) => {
-        fetch(`/properties/${propertyId}`, {
+        fetch(`https://sep-realtors-revised.onrender.com/properties/${propertyId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ const AdminPage = () => {
 
 
     function handleApproveRequest(id){
-        fetch(`/purchase-requests/${id}`, {
+        fetch(`https://sep-realtors-revised.onrender.com/purchase-requests/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -149,7 +149,7 @@ const AdminPage = () => {
     
 
         function handleRejectRequest(id){
-            fetch(`/purchase-requests/${id}`, {
+            fetch(`https://sep-realtors-revised.onrender.com/purchase-requests/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -166,7 +166,7 @@ const AdminPage = () => {
             });
         }
     const handleDeleteAdmin = (id) => {
-        fetch(`/users/${id}`, {
+        fetch(`https://sep-realtors-revised.onrender.com/users/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
