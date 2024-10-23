@@ -5,8 +5,8 @@ from models import db, User, Admin, Buyer, Property, Feature, Image, Infrastruct
 from werkzeug.security import generate_password_hash
 
 with app.app_context():
-    db.drop_all()
-    db.create_all()
+    # db.drop_all()
+    # db.create_all()
     # Initializing Faker
     fake = Faker()
 
